@@ -1,4 +1,3 @@
-
 ### Chapter 4: Organizing the Code Base and Fetching Data in Next.js
 
 >Organizing our components using the atomic design principle
@@ -31,7 +30,7 @@ next-js-app
 
 - Next.js allows us to move ``pages/`` under ``src/`` folder. This will make our code base a bit tidier. (Except for the ``public/`` and ``node_modules``)
 
-#### Organizing Components.
+#### Organizing Components
 
 - We need to organize our configurations files, components, utlities, styles properly.
 - While, there can be many ways of organizing our components, we will use
@@ -59,6 +58,7 @@ atomic design approach.
         - button.test.ts
         - button.styled.ts
 ```
+
 > If you notice, we have created three files. 1 actual component, 1 test file, 1 styles file.
 
 #### Organizing utilities
@@ -110,7 +110,7 @@ atomic design approach.
         - mutation2.js
 ```
 
-#### Data Fetching 
+#### Data Fetching
 
 - We can use any Node.js Http client which works on server side.
 - We can make this call inside ``getStaticProps`` or ``getServerSideProps``.
@@ -120,9 +120,9 @@ atomic design approach.
 
 ##### Consuming Rest APIs
 
- ###### Server Side
+###### Server Side
 
- - non dynamic
+- non dynamic
 
  ```
 import axios from "axios";
@@ -149,7 +149,9 @@ function IndexPage(props: any) {
 }
 export default IndexPage;
  ```
- - dynamic
+
+- dynamic
+
  ```
  import axios from "axios";
 import Head from "next/head";
@@ -178,13 +180,13 @@ export default IndexPage;
  ```
 
  > Instead of hardcoding url, we can also set url in environment variable using ``.env`` file.
- Next.js has built-in support for .env and .env.local files, so you don't have to install external libraries to access those environment variables. 
+ Next.js has built-in support for .env and .env.local files, so you don't have to install external libraries to access those environment variables.
 
- ###### Client Side
+###### Client Side
 
  Similar to how we do in react. We can make calls inside component instead of  getServerSideProps and getStaticProps functions.
 
-  - Non dynamic
+- Non dynamic
 
   ```
 import axios from "axios";
@@ -225,7 +227,7 @@ function IndexPage() {
 export default IndexPage;
   ```
 
-  - Dynamic
+- Dynamic
 
   ```
   import axios from "axios";
@@ -284,10 +286,12 @@ export default IndexPage;
 ```
 yarn add @apollo/client graphql isomorphic-unfetch
 ```
+
 GraphQL uses browser fetch api and to make it work on server we need to use ``isomorphic-unfetch``.
 
-- For Code Demp, i am using <https://github.com/trevorblades/countries> graph api 
-> https://countries.trevorblades.com/graphql
+- For Code Demp, i am using <https://github.com/trevorblades/countries> graph api
+
+> <https://countries.trevorblades.com/graphql>
 
 ##### Set up client
 
@@ -337,6 +341,7 @@ export function useApollo(initialState: any) {
 ```
 
 ##### Quering static query (India country data)
+
 ```
 
 export const GET_COUNTRY_INDIA = gql`
@@ -447,4 +452,4 @@ export default IndexPage;
 
 > If you notice above code snippets, ``useQuery`` hook from apollo client provides, loading and data properties. We can use these two for creating our components.
 
-- Similar to queries, we can do mutations as well in graphQL. 
+- Similar to queries, we can do mutations as well in graphQL.
