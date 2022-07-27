@@ -11,8 +11,10 @@
 - we also use Apollo Client (and its in-memory cache)
 
 ##### Local state management
+
 - The state which is component scoped.
 - Using ``useState``hook
+
 ```
 import type { NextPage } from 'next'
 import { useState } from 'react'
@@ -46,6 +48,7 @@ export default Home
 ##### Global state management
 
 - To maintain same state for all components globally in one place.
+
     ###### Using React Context APi
 
     ```
@@ -180,3 +183,6 @@ export default Home
     ```
 - If use case is simple, better to use context to avoid complexities of redux.
 - But, if we want to manage a single store state for our app, then using redux it becomes easy to debug using dev extension tool.
+
+> Checkout code examples under ``code`` package.
+Run using yarn dev

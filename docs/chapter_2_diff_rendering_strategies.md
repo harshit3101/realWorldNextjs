@@ -147,3 +147,6 @@ export async function getStaticProps() {
 
 
 > Using different approach based on requirement, we can decide which page should be rendered at build time (SSG) or run time (SSR).
+
+> Checkout code examples under ``code`` package.
+Run using yarn dev

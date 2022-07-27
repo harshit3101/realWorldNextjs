@@ -453,3 +453,6 @@ export default IndexPage;
 > If you notice above code snippets, ``useQuery`` hook from apollo client provides, loading and data properties. We can use these two for creating our components.
 
 - Similar to queries, we can do mutations as well in graphQL.
+
+> Checkout code examples under ``code`` package.
+Run using yarn dev

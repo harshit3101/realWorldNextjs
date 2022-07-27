@@ -43,3 +43,6 @@ Babel is a JavaScript transcompiler mainly used for transforming modern JavaScri
 This is the Babel preset created by the Vercel team specifically for building and developing Next.js applications
 
 We can add webpack property in ``next.confg.js`` to modify webpack configs.
+
+> Checkout code examples under ``code`` package.
+Run using yarn dev

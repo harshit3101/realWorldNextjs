@@ -286,3 +286,5 @@ export default function Document() {
 
 > Components **Html**, **Head**, **Main**, **NextScript** && in file is mandatory in same order, otherwise your app will break.
 
+> Checkout code examples under ``code`` package.
+Run using yarn dev
